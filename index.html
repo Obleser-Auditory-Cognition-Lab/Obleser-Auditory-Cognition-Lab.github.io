@@ -15,28 +15,53 @@
 
     <!-- small style sheet -->
     <style>
+                :root {
+                  --bs-white: #fff;
+                  --bs-gray: #6c757d;
+                  --bs-gray-dark: #343a40;
+                  --bs-gray-100: #f8f9fa;
+                  --bs-gray-200: #e9ecef;
+                  --bs-gray-300: #dee2e6;
+                  --bs-gray-400: #ced4da;
+                  --bs-gray-500: #adb5bd;
+                  --bs-gray-600: #6c757d;
+                  --bs-gray-700: #495057;
+                  --bs-gray-800: #343a40;
+                  --bs-gray-900: #212529;
+                  --bs-primary: #0d6efd;
+                  --bs-light-AC_CUSTOM-rgb: 245, 239, 224;
+                  --bs-red-AC_CUSTOM-rgb: 215, 64, 60;
+                  --bs-dark-rgb: 33, 37, 41;
+                  --bs-white-rgb: 255, 255, 255;
+
+                  /* for fonts */
+                  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+                  --bs-body-font-family: var(--bs-font-sans-serif);
+                  --bs-body-font-size: 1rem;
+                  --bs-body-font-weight: 400;
+                  --bs-body-line-height: 1.5;
+                  --bs-body-color: #212529;
+                  --bs-body-bg: #fff;
+                }
+
                 *,
                 *:after,
                 *:before {
                     box-sizing: border-box;
                 }
-                body,
+
                 html {
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
                     font-weight: 300;
                     font-size: 16px;
                     background: #fff;
                     color: #2D3737;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                     min-height: 100%;
                 }
 
                 .protected {
                     background: #fff;
-                    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
                     border-radius: 3px;
                     min-width: 500px;
 
@@ -63,8 +88,6 @@
                     display: block;
                     border: solid 1px #ccc;
                     padding: 12px 14px;
-                    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
                     font-size: 16px;
                     width: 100%;
                     border-radius: 3px;
@@ -82,7 +105,7 @@
                     border: none;
                     color: #fff;
                     padding: 12px 14px;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
                     font-weight: 500;
                     font-size: 16px;
 
@@ -92,8 +115,18 @@
                 }
 
 
-
-                /*! styling for the heading container */
+                body {
+                  margin: 0;
+                  font-family: var(--bs-body-font-family);
+                  font-size: var(--bs-body-font-size);
+                  font-weight: var(--bs-body-font-weight);
+                  line-height: var(--bs-body-line-height);
+                  color: var(--bs-body-color);
+                  text-align: var(--bs-body-text-align);
+                  background-color: var(--bs-body-bg);
+                  -webkit-text-size-adjust: 100%;
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                }
 
                 .py-5 {
                   padding-top: 3rem !important;
@@ -107,7 +140,7 @@
                   margin-right: auto;
                   margin-left: auto;
                 }
-        
+
                 .child_footer {
                   display: flex;
                   align-items: center;
@@ -116,20 +149,20 @@
                   margin-top: 0px;
                   margin-right: 0px;
                   margin-left: 0px;
-                  margin-bottom: 0%;
+                  margin-bottom: 0px;
                   width:100%;
-                  position: relative;
+                  position: fixed;
                   bottom:0; /* fixes the footer at the bottom */
                 }
 
                 .m-0 {
                   margin: 0 !important;
                 }
-        
+
                 .text-center {
                   text-align: center !important;
                 }
-                
+
                 .px-lg-5 {
                   padding-right: 3rem !important;
                   padding-left: 3rem !important;
@@ -173,26 +206,104 @@
                 .fw-bold {
                   font-weight: 700 !important;
                 }
-        
+
                 .bg-dark {
                   --bs-bg-opacity: 1;
                   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
                 }
-        
-        .py-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
 
-        
+                .py-3 {
+                  padding-top: 1rem !important;
+                  padding-bottom: 1rem !important;
+                }
 
-        
-        
-      </style>
+                .navbar {
+                  position: relative;
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding-top: 0.5rem;
+                  padding-bottom: 0.5rem;
+                }
+                .navbar-expand-lg .navbar-nav {
+                  flex-direction: row;
+                }
+                .navbar-dark .navbar-brand {
+                  color: #fff;
+                }
+
+                .ms-auto {
+                  margin-left: auto !important;
+                }
+                .mb-2 {
+                  margin-bottom: 0.5rem !important;
+                }
+
+                .mb-lg-0 {
+                  margin-bottom: 0 !important;
+                }
 
 
 
+                h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+                  margin-top: 0;
+                  margin-bottom: 0.5rem;
+                  font-weight: 500;
+                  line-height: 1.2;
+                }
 
+                h1, .h1 {
+                  font-size: calc(1.375rem + 1.5vw);
+                }
+                @media (min-width: 1200px) {
+                  h1, .h1 {
+                    font-size: 2.5rem;
+                  }
+                }
+
+                h2, .h2 {
+                  font-size: calc(1.325rem + 0.9vw);
+                }
+                @media (min-width: 1200px) {
+                  h2, .h2 {
+                    font-size: 2rem;
+                  }
+                }
+
+                h3, .h3 {
+                  font-size: calc(1.3rem + 0.6vw);
+                }
+                @media (min-width: 1200px) {
+                  h3, .h3 {
+                    font-size: 1.75rem;
+                  }
+                }
+
+                h4, .h4 {
+                  font-size: calc(1.275rem + 0.3vw);
+                }
+                @media (min-width: 1200px) {
+                  h4, .h4 {
+                    font-size: 1.5rem;
+                  }
+                }
+
+                h5, .h5 {
+                  font-size: 1.25rem;
+                }
+
+                h6, .h6 {
+                  font-size: 1rem;
+                }
+
+                p {
+                  margin-top: 0;
+                  margin-bottom: 1rem;
+                }
+
+
+    </style>
 
 
 
@@ -202,9 +313,16 @@
     <body>
     <!-- this is the actual page content -->
 
-       <!-- login container -->
+    <!-- empty navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+          <br>
+          <div class="navbar-brand"> <h5>Auditory Cognition Lab - Lab Wiki </h5> </div>
+          <br>
+        </div>
+    </nav>
 
-
+       <!-- container with heading & brain logo-->
        <header class="py-5">
            <div class="container px-lg-5">
                <div class="p-4 p-lg-5 bg-light-AC-custom rounded-3 text-center">
@@ -215,32 +333,40 @@
                </div>
            </div>
 
+           <br>
+           <br>
+           <br>
 
+           <!-- login container -->
+           <section class="pt-4">
+               <div class="container px-lg-5 ">
 
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">Sorry, you entered the wrong password. You can try again!</div>
-            <div class="protected__content">
+                  <div class="protected bg-light-AC-custom">
+                      <div class="protected__alert" data-id="alert">Sorry, you entered the wrong password. You can try again!</div>
+                        <div class="protected__content">
 
-                <br>
-                <h1 class="protected__content__heading">Please enter the password to continue!</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">sign in</button>
-            </div>
-        </div>
+                          <br>
+                            <h1 class="protected__content__heading">Please enter the password to continue!</h1>
+                            <input class="protected__content__input" data-id="password" type="password" placeholder="mypassword1234"/>
+                            <button data-id="button" type="button" class="protected__content__btn">sign in</button>
+                        </div>
+                  </div>
 
+            </section>
 
 
                 <!-- Footer-->
                 <footer id = "footer" class="child_footer py-3 bg-dark">
                       <div class="container">
                         <p class="m-0 text-center">
-                          <font size="-2" color="grey"><a href = "impressum.html"><u>Impressum</u></a></font>
+                          <font size="-2" color="white"><a href = "impressum.html"><u>Impressum</u></a></font>
                         </p>
                       </div>
                 </footer>
 
 
-</header>
+        </header>
+
 
 
 

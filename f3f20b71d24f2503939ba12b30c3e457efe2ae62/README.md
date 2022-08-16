@@ -1,6 +1,9 @@
-Hi, so you found the password-protected part of the website - well done hacker! 😃
+Hi, 
+so you found the password-protected part of the website - well done hacker! 😃
 
 If you want to keep people from accessing certain documents on the website, put them into this folder. 
+
+---------------------------------------------
 
 ⚠️ Important! ⚠️
 Please keep in mind that while the website may be password-protected, the source code on Github is publicly visible. 

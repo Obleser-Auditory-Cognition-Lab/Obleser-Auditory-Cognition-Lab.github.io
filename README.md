@@ -1,4 +1,4 @@
-Hello, 
+Dear lab member or visitor of our Github page, 
 
 this repo contains the source code for our lab wiki! 
 

@@ -303,6 +303,14 @@
                   margin-top: 0;
                   margin-bottom: 1rem;
                 }
+        
+                /* keep links from turning purple if you already clicked it before */
+                a:visited {
+                  text-decoration: none;
+                  /* make the link white if it was clicked before - I just use this for the Impressum, which is white anyway */
+                  color: white; 
+                }
+
 
 
     </style>

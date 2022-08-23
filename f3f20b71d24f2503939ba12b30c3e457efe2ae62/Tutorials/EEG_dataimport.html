@@ -1,16 +1,31 @@
 <!DOCTYPE html>
+
+<!--
+Hi,
+this is a template you can use for uploading a google doc on the lab wiki.
+I explain how to do this in the Github Pages Tutorial in Step 4.
+I'm happy to help if you have any questions!
+- Merle
+-->
+
+<!-- This is the head of the document. Make sure to set the right path to the Favicon and the CSS file -->
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tutorials Main Page</title>
+        <title>Tutorials HTML Template</title>
         <!-- Favicon-->
+        <!-- PATH TO FAVICON IN ASSETS FILE HERE: -->
         <link rel="icon" type="image/x-icon" href="../assets/AC_Logo.ico" />
         <!-- Core theme CSS -->
+        <!-- PATH TO CSS FILE IN CSS FOLDER HERE: -->
         <link href="../css/styles.css" rel="stylesheet" />
     </head>
+
+
+<!-- This is the body of the document. You can modify this if you like. -->
 
     <body>
 
@@ -25,11 +40,12 @@
                     <!-- Heading in the Navbar -->
                     <a class="navbar-brand" href="../index.html">Auditory Cognition Lab - Lab Wiki</a>
                     <!-- Navbar Menu on the left of the Navbar-->
+                    <!-- CHANGE THESE PATHS! --->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                               <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Home</a></li>
                               <li class="nav-item"><a class="nav-link" aria-current="page" href="../Getting_started/index.html">Getting started</a></li>
-                              <li class="nav-item"><a class="nav-link" aria-current="page" href="../Facilities_Equipment/index.html">Facilities & Equipment</a></li>
+                              <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Tutorials & Analyses</a></li>
                               <li class="nav-item"><a class="nav-link" href="../Team.html">Team</a></li>
                               <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
                             </ul>
@@ -43,8 +59,7 @@
 
               <!-- SIDEBAR -->
 
-
-              <!-- TO DO: Find out how to keep dropdown items selected-->
+              <!-- ADD AN OPTION FOR YOUR FILE HERE! --->
 
               <div class="sidenav">
 
@@ -55,16 +70,16 @@
                 </button>
                 <div class="dropdown-container">
                       <a href="PsychoPy_Pavlovia_Cheatsheet.html">PsychoPy & Pavlovia</a>
-                      <a href="#" style="color:#D94945">Github Pages</a>
-                      <a href="Labvanced.html">Labvanced</a>
+                      <a href="Github_Pages.html">Github Pages</a>
+                      <a href="#">Labvanced</a>
                 </div>
 
                 <button class="dropdown-btn">EEG Analyses
                       <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-container">
-					<a href="EEG_dataimport.html">Data import</a>
-                      <a href="#">Filters</a>
+                      <a href="EEG_dataimport.html">Data import</a>
+					  <a href="#">Filters</a>
                       <a href="#">Epoching</a>
                       <a href="#">ICA</a>
                 </div>
@@ -85,8 +100,8 @@
                  <div class="col">
                      <div class="col-md-5"> <!-- set col-md-5 to something lower to make the card less wide -->
                      <!-- Embed Google Doc Viewer -->
-                     <iframe src="https://docs.google.com/document/d/1hQaAIhkq7cYSmptMl92OjMsMlROz03HxSHu_nlbjMMA/edit?usp=sharing"
-                             class= "google_doc_viewer" frameborder="0"></iframe>
+                     <!-- SET YOUR GOOGLE DOC LINK HERE -->
+                     <iframe src="https://docs.google.com/document/d/1kd9NlUZyU4cWq_0g33WibBxHEwcPUWU8fHAMsmBifpI/edit?usp=sharing" class= "google_doc_viewer" frameborder="0"></iframe>
 
                     </div>
                 </div>
@@ -112,6 +127,7 @@
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
+  <!-- CHANGE THIS PATH --->
   <script src="../js/scripts.js"></script>
 
 </html>
